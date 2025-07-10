@@ -10,16 +10,16 @@ The presentation covers AI-assisted development practices, tools, and workflows 
 
 ```
 Vibe-Coding-Wont-Save-You/
-├── slides/                    # 11 individual slide files 
+├── slides/                   # 11 individual slide files (modular approach)
 ├── themes/                   # External CSS themes
 │   └── vibe-coding.css      # Custom dark theme with green accents
 ├── dist/                    # Generated output files (22 files: 11 HTML + 11 PDF)
 │   ├── *.html              # HTML versions of each slide set
-│   └── *.pdf               # PDF versions of each slide set
+│   ├── *.pdf               # PDF versions of each slide set
+│   └── index.html          # Auto-generated index page
 ├── docs/                    # GitHub Pages deployment files
 ├── .github/workflows/       # GitHub Actions for deployment
-├── build-slides.sh         # Build script using --input-dir
-├── create-index.sh         # Generate index page for GitHub Pages
+├── build-slides.sh         # Complete build script with index generation
 └── .specs/                 # Original course content
 ```
 
@@ -27,10 +27,10 @@ Vibe-Coding-Wont-Save-You/
 
 ### Option 1: Use the Build Script (Recommended)
 ```bash
-# Build HTML presentations only
+# Build HTML presentations + index page
 ./build-slides.sh
 
-# Build HTML + PDF presentations
+# Build HTML + PDF presentations + index page
 ./build-slides.sh --pdf
 ```
 
@@ -109,33 +109,35 @@ The presentation automatically deploys to GitHub Pages when you push to the main
 ### Deployment Features:
 - Automatic HTML generation from modular slide files
 - GitHub Actions workflow (`.github/workflows/marp-deploy.yml`)
-- Beautiful index page linking to all slide sections
+- Beautiful index page linking to all slide sections (auto-generated)
 - Live preview available at GitHub Pages URL
 
 ## 📊 Build Results
 
-Successfully generates **22 files** when using modular approach:
+Successfully generates **23 files** when using the build script:
 - **11 HTML files** - One for each slide section
-- **11 PDF files** - PDF versions of each section
+- **11 PDF files** - PDF versions of each section (with `--pdf` flag)
+- **1 index.html** - Beautiful landing page with navigation to all sections
 - Each slide file becomes a separate presentation
 - Consistent theming across all presentations
 - Individual sections can be used independently
 
 ## 🔧 Technical Implementation
 
+### Build Script Features:
+The `build-slides.sh` script provides:
+- Automated MARP CLI execution with proper flags
+- Index page generation with themed navigation
+- Dependency checking (falls back to npx if needed)
+- Optional PDF generation (`--pdf` flag)
+- Progress reporting and file listing
+- Cross-platform compatibility
+
 ### MARP CLI Features Used:
 - `--input-dir` - Process multiple markdown files from directory
 - `--theme-set` - Apply external CSS themes
 - `--output` - Specify output directory
 - `--html` / `--pdf` - Choose output formats
-
-### Build Script Features:
-The `build-slides.sh` script provides:
-- Automated dependency checking
-- Consistent output directory management
-- Optional PDF generation
-- Progress reporting
-- Cross-platform compatibility
 
 ## 💻 VS Code Integration
 
@@ -204,6 +206,7 @@ More content with **bold** and *italic* text
 ✅ **No JavaScript frameworks** - Simple, reliable rendering  
 ✅ **Modular architecture** - Better organization and collaboration  
 ✅ **Version control friendly** - Track changes effectively  
+✅ **Integrated build system** - Single command generates everything  
 
 ## 🎬 Presentation Content
 

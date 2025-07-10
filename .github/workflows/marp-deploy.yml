@@ -32,20 +32,14 @@ jobs:
 
     - name: Build modular presentation
       run: |
-        # Create output directory
-        mkdir -p dist
-        
-        # Build all slides from slides/ directory using modular approach
-        marp --input-dir ./slides --output ./dist --theme-set ./themes --html
+        # Run the build script which includes index generation
+        ./build-slides.sh
         
         # Copy images to correct location for all slides
         if [ -d "docs/images" ]; then
           mkdir -p dist/docs/images
           cp -r docs/images/* dist/docs/images/
         fi
-        
-        # Create index page using separate script
-        ./create-index.sh
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
