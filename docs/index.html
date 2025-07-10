@@ -337,7 +337,7 @@
         </div>
 
         <!-- Overview -->
-        <div class="step" data-x="2250" data-y="3000" data-scale="10">
+        <div id="overview" class="step" data-x="2250" data-y="3000" data-scale="10">
         </div>
 
     </div>
@@ -346,10 +346,94 @@
         <p>Use arrow keys or spacebar to navigate • Press 'o' for overview</p>
     </div>
 
-    <script src="https://unpkg.com/impress.js@2.0.0/impress.min.js"></script>
+    <script src="impress.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            impress().init();
+        // Debug logging
+        console.log('Starting impress.js initialization...');
+        
+        function initImpress() {
+            try {
+                console.log('Checking impress availability:', typeof window.impress);
+                
+                if (typeof window.impress !== 'function') {
+                    console.error('impress.js not loaded properly');
+                    return;
+                }
+                
+                // Initialize impress.js
+                const api = impress();
+                console.log('impress.js API created:', api);
+                
+                if (!api) {
+                    console.error('Failed to create impress API');
+                    return;
+                }
+                
+                // Check for required DOM elements
+                const impressRoot = document.getElementById('impress');
+                const steps = document.querySelectorAll('.step');
+                console.log('Found impress root:', !!impressRoot);
+                console.log('Found steps:', steps.length);
+                
+                if (!impressRoot) {
+                    console.error('No #impress element found');
+                    return;
+                }
+                
+                if (steps.length === 0) {
+                    console.error('No .step elements found');
+                    return;
+                }
+                
+                // Initialize
+                const result = api.init();
+                console.log('impress.js initialized successfully:', result);
+                
+                // Add navigation event listeners
+                document.addEventListener('keydown', function(event) {
+                    console.log('Key pressed:', event.key);
+                    switch(event.key) {
+                        case 'ArrowRight':
+                        case ' ':
+                            event.preventDefault();
+                            api.next();
+                            break;
+                        case 'ArrowLeft':
+                            event.preventDefault();
+                            api.prev();
+                            break;
+                        case 'o':
+                        case 'O':
+                            event.preventDefault();
+                            api.goto('overview');
+                            break;
+                    }
+                });
+                
+                // Test navigation
+                console.log('Navigation API available:', {
+                    next: typeof api.next,
+                    prev: typeof api.prev,
+                    goto: typeof api.goto
+                });
+                
+                return api;
+                
+            } catch (error) {
+                console.error('Error initializing impress.js:', error);
+            }
+        }
+        
+        // Try multiple initialization methods
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initImpress);
+        } else {
+            initImpress();
+        }
+        
+        // Fallback initialization
+        window.addEventListener('load', function() {
+            setTimeout(initImpress, 100);
         });
     </script>
 </body>
