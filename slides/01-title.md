@@ -13,4 +13,5 @@ color: #e0e0e0
 *...but it might make you a better PM, Architect, and Manager*
 
 An AI-Assisted Development Tutorial
+
 ---
