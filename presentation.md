@@ -13,6 +13,11 @@ color: #e0e0e0
 *...but it might make you a better PM, Architect, and Manager*
 
 An AI-Assisted Development Tutorial
+
+---
+---
+
+
 ## What are we up to here?
 
 **Our Goal:** The developer comes away with a set of practices that they can apply to their own work, and a set of tools that they can use to explore what works for them.
@@ -44,6 +49,9 @@ This course is for developers who are interested in learning how to effectively 
 - Troubleshooting and Problem Solving
 - Tips and Best Practices
 - Heading into the Future
+
+---
+
 
 ## Prerequisites/Preparation
 
@@ -80,6 +88,9 @@ To make things easier for us during the workshop let's take some preparation ste
 - We will use the [VS Code LM API model endpoint](https://code.visualstudio.com/api/extension-guides/ai/language-model) so you don't need to deploy your own model endpoints but if you want to use your own model endpoints look [here for VS Code GH Copilot](https://code.visualstudio.com/docs/copilot/language-models), and [here for Roo Code](https://docs.roocode.com/getting-started/connecting-api-provider) (for Azure Open AI use "OpenAI Compatible"). 
 - For some early parts of the workflow we will use a more conversational approach and I find that works well with ChatGPT. You may also try Claude Desktop or Azure AI Foundry Chat Playground. Note that you have to be aware of data and IP concerns when chatting with externally hosted models. For our purposes it will be fine.
 
+---
+
+
 ## So, What the Heck is Going On?
 
 **Corporate Management has found a new religion – the "New Production Function" aka "The Software Factory"**
@@ -92,6 +103,9 @@ To make things easier for us during the workshop let's take some preparation ste
 - It means continuously learning and experimenting
 
 **The potential for big gains is real, and we all need to embrace it.**
+
+---
+
 
 ## Welcome to your new Job as a Manager
 
@@ -113,6 +127,9 @@ But it turns out its kind of like she comes along with 3-4 of these guys too:
 
 **Your job is to learn how to coach them.** Consider the AI like a team of interns who are super smart, but need to be taught how to do things the way you want them done.
 
+---
+
+
 ## But doesn't the AI produce lots of garbage code?
 
 - **Yes, it does. Frequently.**
@@ -120,6 +137,9 @@ But it turns out its kind of like she comes along with 3-4 of these guys too:
 - By setting up the right guardrails and paying close attention to what it is doing, you can get it to produce code that is useful, functional, sometimes even innovative
 - It can help you discover how to do things you didn't know how to do, and it can let you move very quickly through the parts of the code that you already know how to do
 - That means you can focus on the parts of the problem that are genuinely novel and interesting
+
+---
+
 
 ## Brief overview of tools out there …OMG the agents are everywhere
 
@@ -141,6 +161,9 @@ But it turns out its kind of like she comes along with 3-4 of these guys too:
 - Frequent detours to ChatGPT and GH Copilot Agent Mode
 - Try Agent Mode every other day (be a good citizen – it *is* getting better)
 - Check in regularly with colleagues who are also experimenting
+
+---
+
 
 ## GH Copilot Agent Mode
 
@@ -173,6 +196,9 @@ Use `./github/copilot-instructions.md`.
 
 ### Custom modes and Rooles
 *<demo>*
+
+---
+
 
 ## So I just talk to it, right?
 
@@ -227,6 +253,9 @@ Everything falls apart without robust checks:
 - Integration tests
 - GitHub Actions? (I always run out of quota…)
 
+---
+
+
 ## Things to watch out for and first-aid
 
 - **Throttling** → switch models
@@ -270,6 +299,9 @@ Everything falls apart without robust checks:
 **Idea:** Build a demo-script document that exercises the end-to-end flow; turn it into an integration test.
 - Add to it with each PR
 - Use it to showcase the work
+
+---
+
 
 ## Side-quests and Prompt Explorations
 
