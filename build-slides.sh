@@ -13,7 +13,7 @@ fi
 # Create output directory
 mkdir -p dist
 
-echo "📁 Using marp.config.mjs for markdown-it-include"
+echo "📁 Using marp.config.cjs for markdown-it-include"
 echo "📁 Processing entry: presentation.md"
 echo "🎨 Using theme: ./themes/vibe-coding.css"
 echo "📤 Output directory: ./dist"
@@ -21,7 +21,7 @@ echo "📤 Output directory: ./dist"
 # Build HTML presentation from modular includes
 echo "🔄 Building HTML presentation..."
 marp \
-  --config ./marp.config.mjs \
+  --config ./marp.config.cjs \
   --html \
   --theme-set ./themes \
   --output ./dist/index.html \
@@ -33,7 +33,7 @@ echo "✅ HTML presentation built successfully!"
 if [[ "$1" == "--pdf" ]]; then
     echo "🔄 Building PDF presentation..."
     marp \
-      --config ./marp.config.mjs \
+      --config ./marp.config.cjs \
       --pdf \
       --theme-set ./themes \
       --output ./dist/presentation.pdf \
