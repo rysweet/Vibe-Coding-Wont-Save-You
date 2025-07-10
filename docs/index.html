@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Won't Save You - Interactive Tutorial</title>
+    <link rel="stylesheet" href="https://unpkg.com/impress.js@next/extras/impress-demos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress" 
+         data-transition-duration="1000"
+         data-width="1024"
+         data-height="768"
+         data-max-scale="3"
+         data-min-scale="0"
+         data-perspective="1000"
+         data-autoplay="0">
+
+        <!-- Title Slide -->
+        <div id="title" class="step slide" data-x="0" data-y="0" data-scale="4">
+            <h1>Vibe Coding Won't Save You</h1>
+            <h2>An AI-Assisted Development Tutorial</h2>
+            <div class="subtitle">
+                <p>A self-directed learning experience for developers wanting to learn more about collaborating with AI in their development workflow</p>
+            </div>
+            <div class="navigation-hint">
+                <p>Use arrow keys to navigate • Press spacebar to advance</p>
+            </div>
+        </div>
+
+        <!-- Course Overview -->
+        <div id="overview" class="step slide" data-x="1000" data-y="0" data-scale="1">
+            <h2>Course Overview</h2>
+            <div class="content">
+                <p>This course represents a set of practices that has been working for developers in AI-assisted development.</p>
+                <ul>
+                    <li>Not a comprehensive survey - a point-in-time snapshot</li>
+                    <li>Field changing hourly</li>
+                    <li>Focus on practical tools and workflows</li>
+                    <li>Learn what works for you</li>
+                </ul>
+                <div class="objective">
+                    <strong>Objective:</strong> Come away with practices you can apply to your own work and tools to explore what works for you.
+                </div>
+            </div>
+        </div>
+
+        <!-- Target Audience -->
+        <div id="audience" class="step slide" data-x="2000" data-y="0" data-scale="1">
+            <h2>Target Audience</h2>
+            <div class="content">
+                <p>For developers interested in learning how to effectively collaborate with AI tools in their development workflow.</p>
+                <div class="audience-levels">
+                    <div class="level">
+                        <h3>✅ All Levels Welcome</h3>
+                        <p>Suitable for developers of all experience levels</p>
+                    </div>
+                    <div class="level recommended">
+                        <h3>🎯 Best Experience</h3>
+                        <p>Mid-level experience with programming and software development concepts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Topics -->
+        <div id="topics" class="step slide" data-x="3000" data-y="0" data-scale="1">
+            <h2>Key Topics Covered</h2>
+            <div class="topics-grid">
+                <div class="topic-category">
+                    <h3>🤖 AI Tools</h3>
+                    <ul>
+                        <li>GitHub Copilot</li>
+                        <li>GitHub Agents</li>
+                        <li>Roo Code</li>
+                    </ul>
+                </div>
+                <div class="topic-category">
+                    <h3>📋 Development Process</h3>
+                    <ul>
+                        <li>Spec Driven Development</li>
+                        <li>Iterative Workflow</li>
+                        <li>Tips and Best Practices</li>
+                    </ul>
+                </div>
+                <div class="topic-category">
+                    <h3>🔧 Problem Solving</h3>
+                    <ul>
+                        <li>Troubleshooting</li>
+                        <li>Going off the rails</li>
+                        <li>Future directions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- The New Reality -->
+        <div id="new-reality" class="step slide" data-x="0" data-y="1000" data-scale="1" data-rotate="90">
+            <h2>So, What the Heck is Going On?</h2>
+            <div class="content">
+                <div class="corporate-speak">
+                    <h3>🏢 Corporate Management's New Religion</h3>
+                    <p><em>"The New Production Function" aka "The Software Factory"</em></p>
+                </div>
+                <div class="reality-check">
+                    <h4>"It sounds like a cult when they talk about it - What does this mean?"</h4>
+                    <ul>
+                        <li>🚀 Adventurous AI practitioners demonstrating productivity gains</li>
+                        <li>🤝 Bringing AI into your work as a <strong>partner</strong>, not just autocomplete</li>
+                        <li>💡 Expanding ideas about what's possible and how we iterate</li>
+                        <li>📚 Continuously learning and experimenting</li>
+                    </ul>
+                </div>
+                <div class="bottom-line">
+                    <strong>The potential for big gains is real, and we all need to embrace it.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manager Mindset -->
+        <div id="manager-mindset" class="step slide" data-x="1000" data-y="1000" data-scale="1">
+            <h2>Welcome to your new Job as a Manager</h2>
+            <div class="manager-content">
+                <div class="team-member">
+                    <h3>You just hired 5 of this lady:</h3>
+                    <div class="character-box">
+                        <img src="images/AmeliaBedelia.png" alt="Amelia Bedelia" class="character-img" />
+                        <p><strong>Amelia Bedelia:</strong> Very helpful but takes everything literally and gets into funny situations</p>
+                    </div>
+                </div>
+                <div class="team-bonus">
+                    <h3>Plus she comes with 3-4 of these guys:</h3>
+                    <div class="character-box">
+                        <img src="images/BigBangTheory.png" alt="Big Bang Theory physicists" class="character-img" />
+                        <p><strong>Super-smart physicists:</strong> Comically awkward but brilliant, need practical life lessons</p>
+                    </div>
+                </div>
+                <div class="manager-job">
+                    <h3>🎯 Your Job: Learn to Coach Them</h3>
+                    <p>Consider the AI like a team of interns who are super smart, but need to be taught how to do things the way you want them done.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Quality Reality -->
+        <div id="code-quality" class="step slide" data-x="2000" data-y="1000" data-scale="1">
+            <h2>But doesn't the AI produce lots of garbage code?</h2>
+            <div class="quality-discussion">
+                <div class="honest-answer">
+                    <h3>🗑️ The Honest Truth</h3>
+                    <p><strong>Yes, it does. Frequently.</strong></p>
+                </div>
+                <div class="but-also">
+                    <h3>✨ But Also...</h3>
+                    <ul>
+                        <li>Increasingly produces <strong>useful</strong> code</li>
+                        <li>Sometimes even <strong>surprisingly good</strong> code</li>
+                        <li>Right guardrails + close attention = useful, functional, innovative results</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>🎯 The Real Benefits</h3>
+                    <ul>
+                        <li>🔍 Discover how to do things you didn't know</li>
+                        <li>⚡ Move quickly through familiar code patterns</li>
+                        <li>💡 Focus on genuinely novel and interesting problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Overview -->
+        <div id="tools-overview" class="step slide" data-x="0" data-y="2000" data-scale="1" data-rotate="180">
+            <h2>OMG the agents are everywhere</h2>
+            <div class="tools-landscape">
+                <div class="tool-category cloud">
+                    <h3>☁️ Cloud-Based</h3>
+                    <ul>
+                        <li><strong>OpenAI Codex</strong> - works on your repo in a VM in the cloud</li>
+                        <li><strong>Claude Code</strong> - CLI you can run in your terminal</li>
+                    </ul>
+                    <p><em>Both let you dialog about what you want and "spill their guts" about every step</em></p>
+                </div>
+                <div class="tool-category local">
+                    <h3>💻 Local/IDE</h3>
+                    <ul>
+                        <li><strong>GH Copilot Agent Mode</strong> - runs in VS/VS Code; short bursts, not very autonomous</li>
+                        <li><strong>Cline / Roo Code</strong> - Roo is an improved fork of Cline; OSS and similar to (better than) Agent Mode</li>
+                    </ul>
+                </div>
+                <div class="tool-category github">
+                    <h3>🐙 GitHub Integration</h3>
+                    <ul>
+                        <li><strong>GH Agents</strong> - work on your repo in GitHub, driven by issues</li>
+                    </ul>
+                </div>
+                <div class="tool-category others">
+                    <h3>🌊 Long Tail</h3>
+                    <p>Augment, DevN, Windsurf, etc.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Journey -->
+        <div id="personal-journey" class="step slide" data-x="1000" data-y="2000" data-scale="1">
+            <h2>Where I'm at today – chasing my own tail?</h2>
+            <div class="journey-timeline">
+                <div class="preference past">
+                    <h3>📊 Past Preferences</h3>
+                    <ul>
+                        <li>❤️ Loved Claude Code</li>
+                        <li>🥈 Codex was second, but cost was too high</li>
+                    </ul>
+                </div>
+                <div class="preference current">
+                    <h3>🎯 Current Setup</h3>
+                    <ul>
+                        <li>🆕 Always use VS Code Insiders, update daily</li>
+                        <li>🥇 Settled on <strong>Roo Code</strong> as primary tool</li>
+                        <li>🏆 Now like it better than Claude Code or Codex</li>
+                    </ul>
+                </div>
+                <div class="preference ongoing">
+                    <h3>🔄 Ongoing Exploration</h3>
+                    <ul>
+                        <li>💬 Frequent detours to ChatGPT</li>
+                        <li>🔬 Try Agent Mode every other day (be a good citizen)</li>
+                        <li>👥 Check in regularly with experimenting colleagues</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spec-Driven Development -->
+        <div id="spec-driven" class="step slide" data-x="0" data-y="3000" data-scale="1" data-rotate="270">
+            <h2>Spec-Driven Development</h2>
+            <div class="spec-content">
+                <div class="spec-principle">
+                    <h3>📋 The Principle</h3>
+                    <ul>
+                        <li>Create the specification you would want to receive as a developer</li>
+                        <li>Create the specification your PM would normally give you</li>
+                        <li>Talk to it like one of your besties...</li>
+                    </ul>
+                </div>
+                <div class="spec-approach">
+                    <h3>🎯 The Approach</h3>
+                    <p><strong>Write a spec as if you were trying to set an intern up for success.</strong></p>
+                </div>
+                <div class="no-spec">
+                    <h3>❓ But what if I don't have a spec?</h3>
+                    <ul>
+                        <li>✍️ Write a few sentences, then talk to o3 or GPT-4.1/4.5</li>
+                        <li>🔄 Iterate with the model to build the spec together</li>
+                        <li>🗣️ Just talk out loud about what you want to do</li>
+                        <li>🚗 Great use of drive time!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Iterative Workflow -->
+        <div id="iterative-workflow" class="step slide" data-x="1000" data-y="3000" data-scale="1">
+            <h2>Iterative Workflow</h2>
+            <div class="workflow-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>💡 Ideate</h3>
+                        <p>Keep a backlog</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>🔍 Refine</h3>
+                        <p>Dig into details</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>🧪 Experiment</h3>
+                        <p>Run an Agent-Mode/Roo experiment</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>🔧 Tweak</h3>
+                        <p>Adjust the spec, try again</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>📝 Review</h3>
+                        <p>Ask the model to review and update the spec</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>✅ Test</h3>
+                        <p>Focus on tests and checks</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>🚀 Ship</h3>
+                        <p>Validate, commit, PR!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div id="troubleshooting" class="step slide" data-x="2000" data-y="3000" data-scale="1">
+            <h2>Things to watch out for and first-aid</h2>
+            <div class="troubleshooting-grid">
+                <div class="problem-solution">
+                    <div class="problem">🐌 Throttling</div>
+                    <div class="solution">→ switch models</div>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem">❌ Editing/diff failures</div>
+                    <div class="solution">→ switch models</div>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem">🔄 Getting stuck</div>
+                    <div class="solution">→ give a prompt hint or switch models</div>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem">🧠 Context management</div>
+                    <div class="solution">→ instruct agent to refresh context & reiterate guidelines</div>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem">⏹️ Task stoppage</div>
+                    <div class="solution">→ remind it to continue until implementation is complete</div>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem">🐳 Docker miasma of pain</div>
+                    <div class="solution">→ invest in container-management logic if you have multiple check-outs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Going Off the Rails -->
+        <div id="off-rails" class="step slide" data-x="0" data-y="4000" data-scale="1">
+            <h2>Going off the rails</h2>
+            <div class="rails-problems">
+                <div class="problem-category">
+                    <h3>😴 Laziness</h3>
+                    <p><strong>OMG we'd fire these guys</strong></p>
+                </div>
+                <div class="problem-category">
+                    <h3>🤦 Forgetfulness</h3>
+                    <p>→ move common reminders into rules/instructions</p>
+                </div>
+                <div class="problem-category">
+                    <h3>🧪 Testing shenanigans</h3>
+                    <p><strong>always check!</strong></p>
+                    <ul>
+                        <li>Skipping tests</li>
+                        <li>Writing tests but not running them</li>
+                        <li>Ensuring tests always exit <code>true</code></li>
+                    </ul>
+                </div>
+                <div class="problem-category">
+                    <h3>⚠️ Pre-commit & checks</h3>
+                    <p>→ beware sneaking in <code>--no-verify</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Review -->
+        <div id="code-review" class="step slide" data-x="1000" data-y="4000" data-scale="1">
+            <h2>You have to always look at the code... but you won't</h2>
+            <div class="review-reality">
+                <div class="hard-truth">
+                    <h3>🚨 Hard Truth</h3>
+                    <p>Seriously, you can't skip this.</p>
+                    <p>Once you're grooving and it "just works," you <em>will</em> skip it.</p>
+                </div>
+                <div class="what-to-do">
+                    <h3>🛠️ Here's what to do:</h3>
+                    <ul>
+                        <li>💬 Ask the model to explain the code – you'll often be horrified (update instructions!)</li>
+                        <li>👥 Ask the model to perform code review (different persona)</li>
+                        <li>👀 <strong>Still</strong> go look at the diffs – way easier before they're committed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Run the Code -->
+        <div id="run-code" class="step slide" data-x="2000" data-y="4000" data-scale="1">
+            <h2>You have to always run the code... but you won't</h2>
+            <div class="run-reality">
+                <div class="necessity">
+                    <h3>✅ The Necessity</h3>
+                    <p>You <em>do</em> need to run the code.</p>
+                    <p>But you'll forget or won't try everything.</p>
+                </div>
+                <div class="solution">
+                    <h3>💡 Idea: Build a demo-script document</h3>
+                    <ul>
+                        <li>📋 Exercises the end-to-end flow</li>
+                        <li>🧪 Turn it into an integration test</li>
+                        <li>➕ Add to it with each PR</li>
+                        <li>🎪 Use it to showcase the work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Quests -->
+        <div id="side-quests" class="step slide" data-x="0" data-y="5000" data-scale="1" data-rotate="45">
+            <h2>Side-quests and Prompt Explorations</h2>
+            <div class="exploration-techniques">
+                <div class="technique">
+                    <h3>👥 Treat the model like an employee/colleague</h3>
+                    <p>Ask it questions</p>
+                </div>
+                <div class="technique">
+                    <h3>🤔 Do "what-ifs"</h3>
+                </div>
+                <div class="technique">
+                    <h3>❓ Ask it to ask <em>you</em> questions</h3>
+                    <p>And take notes</p>
+                </div>
+                <div class="technique">
+                    <h3>🔄 Repeatedly have it explain things</h3>
+                    <p>Then ask probing questions</p>
+                </div>
+                <div class="theme">
+                    <h3>🎯 See a theme?</h3>
+                    <p><strong>Curiosity helps!</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future -->
+        <div id="future" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+            <h2>This is just a waypoint – where are we going?</h2>
+            <div class="future-content">
+                <div class="trend">
+                    <h3>📈 The capabilities keep increasing</h3>
+                </div>
+                <div class="destination">
+                    <h3>🎯 We are headed to self-improving programs</h3>
+                </div>
+                <div class="journey-continues">
+                    <p>This tutorial represents current best practices, but the field is evolving rapidly. Stay curious, keep experimenting, and adapt your workflow as new tools and capabilities emerge.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div id="conclusion" class="step slide" data-x="0" data-y="0" data-z="-3000" data-scale="6">
+            <h2>Thank you for taking this journey!</h2>
+            <div class="conclusion-content">
+                <h3>🎯 Key Takeaways</h3>
+                <ul>
+                    <li>AI is a powerful partner, not just autocomplete</li>
+                    <li>Spec-driven development sets you up for success</li>
+                    <li>Iteration and experimentation are key</li>
+                    <li>Always review and test the code</li>
+                    <li>Stay curious and keep learning</li>
+                </ul>
+                <div class="next-steps">
+                    <h3>🚀 Next Steps</h3>
+                    <p>Start experimenting with AI tools in your own projects. Begin small, iterate, and build up your practices over time.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div id="overview-all" class="step" data-x="1000" data-y="2500" data-scale="10">
+        </div>
+
+    </div>
+
+    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate. <br/>
+           Press 'P' to see all slides at once.</p>
+    </div>
+
+    <script src="https://unpkg.com/impress.js@next/extras/impress-demos.js"></script>
+    <script src="https://unpkg.com/impress.js@next/impress.js"></script>
+    <script>
+        // Initialize impress.js
+        impress().init();
+        
+        // Add some custom navigation enhancements
+        document.addEventListener('keydown', function(e) {
+            // P key for overview
+            if (e.key === 'p' || e.key === 'P') {
+                impress().goto('overview-all');
+            }
+        });
+
+        // Auto-advance functionality (optional)
+        let autoAdvance = false;
+        let autoAdvanceTimeout;
+        
+        function toggleAutoAdvance() {
+            autoAdvance = !autoAdvance;
+            if (autoAdvance) {
+                autoAdvanceTimeout = setInterval(() => {
+                    impress().next();
+                }, 10000); // 10 seconds per slide
+            } else {
+                clearInterval(autoAdvanceTimeout);
+            }
+        }
+        
+        // Add auto-advance toggle on 'a' key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'a' || e.key === 'A') {
+                toggleAutoAdvance();
+            }
+        });
+    </script>
+</body>
+</html>

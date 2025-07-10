@@ -1,0 +1,32 @@
+# GitHub Pages Configuration for Vibe Coding Won't Save You Tutorial
+
+# Site settings
+title: "Vibe Coding Won't Save You"
+description: "An AI-Assisted Development Tutorial - A self-directed learning experience for developers wanting to learn more about collaborating with AI in their development workflow"
+baseurl: "/Vibe-Coding-Wont-Save-You"
+url: "https://USERNAME.github.io" # This will be updated when deployed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .specs/
+
+# Include files
+include:
+  - _*
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Enable GitHub Pages
+github:
+  is_project_page: true
