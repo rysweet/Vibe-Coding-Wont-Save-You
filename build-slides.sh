@@ -4,10 +4,10 @@
 
 echo "🎯 Building MARP presentation from modular slides using markdown-it-include..."
 
-# Check if marp is installed
-if ! command -v marp &> /dev/null; then
-    echo "❌ MARP CLI not found. Installing via npx..."
-    npx @marp-team/marp-cli --version
+# Check if npx is available
+if ! command -v npx &> /dev/null; then
+    echo "❌ npx not found. Please install Node.js and npm."
+    exit 1
 fi
 
 # Create output directory
@@ -18,9 +18,9 @@ echo "📁 Processing entry: presentation.md"
 echo "🎨 Using theme: ./themes/vibe-coding.css"
 echo "📤 Output directory: ./dist"
 
-# Build HTML presentation from modular includes
+# Build HTML presentation from modular includes using local marp-cli and npx
 echo "🔄 Building HTML presentation..."
-marp \
+npx marp \
   --config ./marp.config.cjs \
   --html \
   --theme-set ./themes \
@@ -32,7 +32,7 @@ echo "✅ HTML presentation built successfully!"
 # Optional: Build PDF version (add --pdf flag to enable)
 if [[ "$1" == "--pdf" ]]; then
     echo "🔄 Building PDF presentation..."
-    marp \
+    npx marp \
       --config ./marp.config.cjs \
       --pdf \
       --theme-set ./themes \

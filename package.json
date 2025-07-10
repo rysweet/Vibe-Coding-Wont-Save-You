@@ -1,5 +1,14 @@
 {
+  "name": "vibe-coding-wont-save-you",
+  "version": "1.0.0",
+  "description": "Modular MARP presentation with markdown-it-include",
+  "type": "module",
+  "scripts": {
+    "build": "npx marp --config ./marp.config.cjs --html --theme-set ./themes --output ./dist/index.html presentation.md",
+    "build:pdf": "npx marp --config ./marp.config.cjs --pdf --theme-set ./themes --output ./dist/presentation.pdf presentation.md"
+  },
   "devDependencies": {
-    "markdown-it-include": "^2.0.0"
+    "@marp-team/marp-cli": "^3.4.0",
+    "markdown-it-include": "^1.1.0"
   }
 }
