@@ -1,10 +1,27 @@
 # "Vibe Coding" Won't Save You - MARP Presentation
 
-An AI-Assisted Development Tutorial presentation built with MARP (Markdown Presentation Ecosystem).
+An AI-Assisted Development Tutorial presentation built with MARP (Markdown Presentation Ecosystem) using a modular architecture.
 
 ## 🎯 Overview
 
-The presentation covers AI-assisted development practices, tools, and workflows for developers. This presentation has been structured to use a **modular approach** with separate files for organization, maintainability, and collaboration. 
+The presentation covers AI-assisted development practices, tools, and workflows for developers. This presentation uses a **modular approach** with separate files for organization, maintainability, and collaboration. 
+
+## 📁 Project Structure
+
+```
+Vibe-Coding-Wont-Save-You/
+├── slides/                    # 11 individual slide files 
+├── themes/                   # External CSS themes
+│   └── vibe-coding.css      # Custom dark theme with green accents
+├── dist/                    # Generated output files (22 files: 11 HTML + 11 PDF)
+│   ├── *.html              # HTML versions of each slide set
+│   └── *.pdf               # PDF versions of each slide set
+├── docs/                    # GitHub Pages deployment files
+├── .github/workflows/       # GitHub Actions for deployment
+├── build-slides.sh         # Build script using --input-dir
+├── create-index.sh         # Generate index page for GitHub Pages
+└── .specs/                 # Original course content
+```
 
 ## 🚀 Quick Start
 
@@ -27,10 +44,15 @@ marp --input-dir ./slides --output ./dist --theme-set ./themes --pdf
 
 # Preview mode (watch for changes)
 marp --input-dir ./slides --theme-set ./themes --preview
-
-# Traditional single-file approach
-marp presentation.md --html --output index.html
 ```
+
+### Option 3: VS Code Tasks
+1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
+2. Type "Tasks: Run Task"
+3. Choose from available tasks:
+   - `Marp: Build Modular Slides (HTML)`
+   - `Marp: Build Modular Slides (HTML + PDF)`
+   - `Marp: Watch Modular Slides`
 
 ## 🛠 Installation & Dependencies
 
@@ -40,7 +62,7 @@ marp presentation.md --html --output index.html
 npm install -g @marp-team/marp-cli
 
 # Or use npx for one-time use
-npx @marp-team/marp-cli presentation.md --html
+npx @marp-team/marp-cli --input-dir ./slides --html
 ```
 
 ### Requirements
@@ -85,8 +107,9 @@ The presentation automatically deploys to GitHub Pages when you push to the main
 4. **Access your presentation** at: `https://yourusername.github.io/your-repo-name/`
 
 ### Deployment Features:
-- Automatic HTML generation from `presentation.md`
+- Automatic HTML generation from modular slide files
 - GitHub Actions workflow (`.github/workflows/marp-deploy.yml`)
+- Beautiful index page linking to all slide sections
 - Live preview available at GitHub Pages URL
 
 ## 📊 Build Results
@@ -106,32 +129,13 @@ Successfully generates **22 files** when using modular approach:
 - `--output` - Specify output directory
 - `--html` / `--pdf` - Choose output formats
 
-### Legacy Single-File Support:
-The original `presentation.md` file is preserved and can still be used:
-```bash
-# Generate HTML from single file
-marp presentation.md --html --output index.html
-
-# Export to PDF
-marp presentation.md --pdf --output presentation.pdf
-
-# Export to PowerPoint
-marp presentation.md --pptx --output presentation.pptx
-```
-
-## 🔄 Converting Between Formats
-
-### From Modular to Monolithic:
-```bash
-# Combine all slide files (basic approach)
-cat slides/*.md > combined-presentation.md
-
-# Or use a more sophisticated build process
-# (handle YAML front matter properly)
-```
-
-### From Monolithic to Modular:
-Already implemented! Use the existing modular structure in the `slides/` directory.
+### Build Script Features:
+The `build-slides.sh` script provides:
+- Automated dependency checking
+- Consistent output directory management
+- Optional PDF generation
+- Progress reporting
+- Cross-platform compatibility
 
 ## 💻 VS Code Integration
 
@@ -190,7 +194,7 @@ More content with **bold** and *italic* text
 - Test both HTML and PDF outputs before committing
 - Keep individual slide files focused on single topics
 
-## ⚡ Advantages of MARP
+## ⚡ Advantages of This Approach
 
 ✅ **Pure Markdown** - Keep your content in version control  
 ✅ **Multiple output formats** - HTML, PDF, PowerPoint  
@@ -215,4 +219,4 @@ Perfect for developers looking to enhance their AI collaboration skills!
 
 ---
 
-*This approach is much more maintainable than complex JavaScript presentation frameworks while providing the flexibility of modern content management!*
+*This modular MARP approach provides maintainability and flexibility while keeping the simplicity of Markdown-based presentations!*
