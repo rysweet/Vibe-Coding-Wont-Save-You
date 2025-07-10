@@ -4,6 +4,12 @@ section {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
+  width: 960px;
+  margin: 40px auto;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 48px 64px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 h1 {
