@@ -38,9 +38,10 @@ jobs:
         # Convert Markdown to HTML with Marp
         marp presentation.md --html --output dist/index.html
         
-        # Copy assets if they exist
+        # Copy images to correct location
         if [ -d ".specs/images" ]; then
-          cp -r .specs/images dist/
+          mkdir -p dist/.specs/images
+          cp -r .specs/images/* dist/.specs/images/
         fi
 
     - name: Setup Pages
