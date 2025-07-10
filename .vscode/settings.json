@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "presentation.md": "markdown"
+    },
+    "markdown.marp.enableHtml": true,
+    "markdown.marp.outlineExtension": true,
+    "markdown.marp.themes": [],
+    "markdown.preview.breaks": true,
+    "markdown.preview.linkify": true,
+    "files.exclude": {
+        "dev-presentation.html": true
+    },
+    "files.watcherExclude": {
+        "**/dev-presentation.html": true,
+        "**/presentation.pdf": true,
+        "**/presentation.pptx": true
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "task.allowAutomaticTasks": "on",
+    "extensions.ignoreRecommendations": false,
+    "recommendations": [
+        "marp-team.marp-vscode"
+    ]
+}

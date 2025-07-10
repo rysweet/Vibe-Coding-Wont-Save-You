@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🚀 Marp: Live Server (F5)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dev-preview.sh",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Marp: Start Live Server",
+            "postDebugTask": "Marp: Generate HTML Preview",
+            "presentation": {
+                "hidden": false,
+                "group": "Marp Development",
+                "order": 1
+            },
+            "serverReadyAction": {
+                "pattern": ".*listening.*port ([0-9]+)",
+                "uriFormat": "http://localhost:%s",
+                "action": "openExternally"
+            }
+        },
+        {
+            "name": "📝 Marp: Generate & Open HTML",
+            "type": "node", 
+            "request": "launch",
+            "program": "${workspaceFolder}/dev-preview.sh",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Marp: Generate HTML Preview",
+            "presentation": {
+                "hidden": false,
+                "group": "Marp Development", 
+                "order": 2
+            }
+        },
+        {
+            "name": "🔄 Marp: Watch Mode",
+            "type": "node",
+            "request": "launch", 
+            "program": "${workspaceFolder}/dev-preview.sh",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Marp: Watch & Generate HTML",
+            "presentation": {
+                "hidden": false,
+                "group": "Marp Development",
+                "order": 3
+            }
+        },
+        {
+            "name": "📄 Marp: Export PDF",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dev-preview.sh", 
+            "console": "integratedTerminal",
+            "preLaunchTask": "Marp: Export to PDF",
+            "presentation": {
+                "hidden": false,
+                "group": "Marp Development",
+                "order": 4
+            }
+        }
+    ]
+}
