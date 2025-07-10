@@ -40,12 +40,15 @@ jobs:
           cp -r docs/images/* dist/docs/images/
         fi
 
-    - name: List dist directory contents
+    - name: Print working directory and dist contents
       run: |
-        echo "Contents of dist/:"
-        ls -l dist/
-        echo "Contents of dist/docs/images/:"
-        ls -l dist/docs/images/ || true
+        echo "PWD: $(pwd)"
+        echo "Contents of ./dist:"
+        ls -l ./dist
+        echo "Contents of ./dist/docs/images:"
+        ls -l ./dist/docs/images || true
+        echo "Find index.html:"
+        find . -name index.html
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
