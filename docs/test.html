@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impress.js Test</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .step {
+            width: 900px;
+            height: 700px;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+        .fallback-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p><b>Your browser doesn't support the features required</b> by impress.js</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div class="step" data-x="0" data-y="0">
+        <h1>Slide 1</h1>
+        <p>This is the first slide</p>
+    </div>
+    
+    <div class="step" data-x="1200" data-y="0">
+        <h1>Slide 2</h1>
+        <p>This is the second slide</p>
+    </div>
+    
+    <div class="step" data-x="2400" data-y="0">
+        <h1>Slide 3</h1>
+        <p>This is the third slide</p>
+    </div>
+</div>
+
+<script src="impress.min.js"></script>
+<script>
+console.log('🚀 Test: Starting impress.js...');
+console.log('🔍 Test: impress function available?', typeof impress);
+
+try {
+    const api = impress();
+    console.log('✅ Test: API created successfully', api);
+    
+    const result = api.init();
+    console.log('✅ Test: Init result:', result);
+    
+    // Remove fallback if successful
+    document.body.classList.remove('impress-not-supported');
+    const fallback = document.querySelector('.fallback-message');
+    if (fallback) fallback.style.display = 'none';
+    
+    console.log('✅ Test: Should be working now!');
+} catch (error) {
+    console.error('❌ Test: Error:', error);
+}
+</script>
+
+</body>
+</html>
