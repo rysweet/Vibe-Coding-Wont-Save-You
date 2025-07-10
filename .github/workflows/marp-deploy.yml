@@ -30,19 +30,22 @@ jobs:
     - name: Install Marp CLI
       run: npm install -g @marp-team/marp-cli
 
-    - name: Build presentation
+    - name: Build modular presentation
       run: |
         # Create output directory
         mkdir -p dist
         
-        # Convert Markdown to HTML with Marp
-        marp presentation.md --html --output dist/index.html
+        # Build all slides from slides/ directory using modular approach
+        marp --input-dir ./slides --output ./dist --theme-set ./themes --html
         
-        # Copy images to correct location
+        # Copy images to correct location for all slides
         if [ -d "docs/images" ]; then
           mkdir -p dist/docs/images
           cp -r docs/images/* dist/docs/images/
         fi
+        
+        # Create index page using separate script
+        ./create-index.sh
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
