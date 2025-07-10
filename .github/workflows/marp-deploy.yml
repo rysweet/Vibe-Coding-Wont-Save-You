@@ -30,6 +30,16 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Debug: print presentation.md
+      run: |
+        echo "===== presentation.md ====="
+        cat presentation.md
+
+    - name: Debug: print marp.config.cjs
+      run: |
+        echo "===== marp.config.cjs ====="
+        cat marp.config.cjs
+
     - name: Build modular presentation
       run: |
         npm run build
