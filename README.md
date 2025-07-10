@@ -6,34 +6,6 @@ An AI-Assisted Development Tutorial presentation built with MARP (Markdown Prese
 
 The presentation covers AI-assisted development practices, tools, and workflows for developers. This presentation has been structured to use a **modular approach** with separate files for organization, maintainability, and collaboration. 
 
-## 📁 Project Structure
-
-```
-Vibe-Coding-Wont-Save-You/
-├── slides/                    # 11 individual slide files (modular approach)
-│   ├── 01-title.md           # "Vibe Coding" Won't Save You
-│   ├── 02-what-are-we-up-to.md   # What are we up to here?, Target Audience, Key Topics
-│   ├── 03-prerequisites.md   # Prerequisites/Preparation (3 slides)
-│   ├── 04-whats-going-on.md  # So, What the Heck is Going On?
-│   ├── 05-new-job-manager.md # Welcome to your new Job as a Manager
-│   ├── 06-garbage-code.md    # But doesn't the AI produce lots of garbage code?
-│   ├── 07-tools-overview.md  # Brief overview of tools, Where I'm at today
-│   ├── 08-specific-tools.md  # GH Copilot Agent Mode, GH Agents, Roo Cline
-│   ├── 09-development-approach.md # Spec-Driven Development, Iterative Workflow
-│   ├── 10-troubleshooting.md # Things to watch out for, Going off the rails
-│   └── 11-exploration-future.md  # Side-quests, Future, Thank You
-├── themes/                   # External CSS themes
-│   └── vibe-coding.css      # Custom dark theme with green accents
-├── dist/                    # Generated output files (22 files: 11 HTML + 11 PDF)
-│   ├── *.html              # HTML versions of each slide set
-│   └── *.pdf               # PDF versions of each slide set
-├── docs/                    # GitHub Pages deployment files
-├── .github/workflows/       # GitHub Actions for deployment
-├── build-slides.sh         # Build script using --input-dir
-├── presentation.md         # Original monolithic file (preserved for reference)
-└── .specs/                 # Original course content
-```
-
 ## 🚀 Quick Start
 
 ### Option 1: Use the Build Script (Recommended)
