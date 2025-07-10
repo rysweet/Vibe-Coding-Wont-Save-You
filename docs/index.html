@@ -354,8 +354,44 @@
 
     </div>
 
-    <script src="https://unpkg.com/impress.js@2.0.0/impress.min.js"></script>
-    <script>impress().init();</script>
+    <script src="impress.min.js"></script>
+    <script>
+        console.log('🚀 Starting impress.js initialization...');
+        
+        // Check if script loaded
+        if (typeof impress === 'undefined') {
+            console.error('❌ impress.js failed to load!');
+            document.querySelector('.fallback-message').style.display = 'block';
+        } else {
+            console.log('✅ impress.js loaded successfully');
+            try {
+                // Remove fallback message
+                const fallback = document.querySelector('.fallback-message');
+                if (fallback) fallback.style.display = 'none';
+                
+                // Remove not-supported class
+                document.body.classList.remove('impress-not-supported');
+                
+                // Initialize
+                const api = impress();
+                console.log('✅ impress API created:', api);
+                
+                api.init();
+                console.log('✅ impress.js initialized successfully!');
+                
+                // Test navigation
+                console.log('🎮 Navigation methods available:', {
+                    next: typeof api.next,
+                    prev: typeof api.prev,
+                    goto: typeof api.goto
+                });
+                
+            } catch (error) {
+                console.error('❌ Error initializing impress.js:', error);
+                document.querySelector('.fallback-message').style.display = 'block';
+            }
+        }
+    </script>
 
 </body>
 </html>
