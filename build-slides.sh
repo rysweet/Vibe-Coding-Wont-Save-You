@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Build script for MARP presentation using markdown-it-include for modular slides
+# Build script for MARP presentation using modular slides
+# Concatenates all slides/*.md into presentation.md before building
 
-echo "🎯 Building MARP presentation from modular slides using markdown-it-include..."
+echo "🎯 Building MARP presentation from modular slides (concatenation approach)..."
 
 # Check if npx is available
 if ! command -v npx &> /dev/null; then
@@ -13,15 +14,17 @@ fi
 # Create output directory
 mkdir -p dist
 
-echo "📁 Using marp.config.cjs for markdown-it-include"
+# Concatenate all slides into presentation.md
+echo "🔄 Concatenating slides/*.md into presentation.md"
+cat slides/*.md > presentation.md
+
 echo "📁 Processing entry: presentation.md"
 echo "🎨 Using theme: ./themes/vibe-coding.css"
 echo "📤 Output directory: ./dist"
 
-# Build HTML presentation from modular includes using local marp-cli and npx
+# Build HTML presentation from concatenated file
 echo "🔄 Building HTML presentation..."
 npx marp \
-  --config ./marp.config.cjs \
   --html \
   --theme-set ./themes \
   --output ./dist/index.html \
@@ -33,7 +36,6 @@ echo "✅ HTML presentation built successfully!"
 if [[ "$1" == "--pdf" ]]; then
     echo "🔄 Building PDF presentation..."
     npx marp \
-      --config ./marp.config.cjs \
       --pdf \
       --theme-set ./themes \
       --output ./dist/presentation.pdf \
