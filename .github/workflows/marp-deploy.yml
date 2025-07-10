@@ -27,10 +27,8 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Install Marp CLI and markdown-it-include
-      run: |
-        npm install -g @marp-team/marp-cli
-        npm install markdown-it-include --save-dev
+    - name: Install dependencies
+      run: npm ci
 
     - name: Build modular presentation
       run: |
