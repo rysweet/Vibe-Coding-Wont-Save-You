@@ -39,9 +39,9 @@ jobs:
         marp presentation.md --html --output dist/index.html
         
         # Copy images to correct location
-        if [ -d ".specs/images" ]; then
-          mkdir -p dist/.specs/images
-          cp -r .specs/images/* dist/.specs/images/
+        if [ -d "docs/images" ]; then
+          mkdir -p dist/docs/images
+          cp -r docs/images/* dist/docs/images/
         fi
 
     - name: Setup Pages

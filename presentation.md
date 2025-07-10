@@ -117,7 +117,7 @@ To make things easier for us during the workshop let's take some preparation ste
 
 One of the fastest and easiest ways to get your head into the right space is to pretend you just hired at least 5 of this lady:
 
-![Amelia Bedelia](./.specs/images/AmeliaBedelia.png)
+![Amelia Bedelia](./docs/images/AmeliaBedelia.png)
 
 *Amelia Bedelia is a character in American children's books who is very helpful but takes everything literally and gets into funny situations as a result*
 
@@ -127,7 +127,7 @@ One of the fastest and easiest ways to get your head into the right space is to 
 
 But it turns out its kind of like she comes along with 3-4 of these guys too:
 
-![Screen Grab showing the physicists from the Big Bang Theory TV show](./.specs/images/BigBangTheory.png)
+![Screen Grab showing the physicists from the Big Bang Theory TV show](./docs/images/BigBangTheory.png)
 
 *In The BigBang Theory, a group of super-smart physicists are comically awkward and are taught practical life lessons by their friend and neighbor*
 
