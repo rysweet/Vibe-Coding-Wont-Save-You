@@ -14,7 +14,7 @@ fi
 # Create output directory
 mkdir -p dist
 
-# Concatenate all slides into presentation.md
+# Overwrite presentation.md with concatenated slides (no @include lines)
 echo "🔄 Concatenating slides/*.md into presentation.md"
 cat slides/*.md > presentation.md
 
