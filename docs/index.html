@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vibe Coding Won't Save You - Interactive Tutorial</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <meta name="description" content="AI-Assisted Development Tutorial" />
+    <meta name="author" content="Ryan Sweet" />
     
-    <div class="fallback-message" style="display: none;">
+    <!-- Import common impress.js styles -->
+    <link href="https://unpkg.com/impress.js@2.0.0/css/impress-common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+
+    <div class="fallback-message">
         <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
         <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
     </div>
 
-    <div id="impress">
+    <div id="impress" 
+         data-transition-duration="1000"
+         data-width="1920" 
+         data-height="1080" 
+         data-max-scale="3" 
+         data-min-scale="0" 
+         data-perspective="1000">
 
         <!-- Title Slide -->
-        <div class="step" data-x="0" data-y="0" data-scale="4">
+        <div class="step slide title" data-x="-2200" data-y="-3000">
             <h1>Vibe Coding Won't Save You</h1>
             <h2>An AI-Assisted Development Tutorial</h2>
             <p class="subtitle">A self-directed learning experience for developers wanting to learn more about collaborating with AI in their development workflow</p>
@@ -24,8 +36,8 @@
         </div>
 
         <!-- Course Overview -->
-        <div class="step" data-x="1500" data-y="0" data-scale="1">
-            <h2>Course Overview</h2>
+        <div class="step slide" data-rel-x="2200" data-rel-y="0">
+            <h1>Course Overview</h1>
             <p>This course represents a set of practices that has been working for developers in AI-assisted development.</p>
             <ul>
                 <li>Not a comprehensive survey - a point-in-time snapshot</li>
@@ -39,8 +51,8 @@
         </div>
 
         <!-- Target Audience -->
-        <div class="step" data-x="3000" data-y="0" data-scale="1">
-            <h2>Target Audience</h2>
+        <div class="step slide">
+            <h1>Target Audience</h1>
             <p>For developers interested in learning how to effectively collaborate with AI tools in their development workflow.</p>
             <div class="audience-grid">
                 <div class="audience-card">
@@ -55,8 +67,8 @@
         </div>
 
         <!-- Key Topics -->
-        <div class="step" data-x="4500" data-y="0" data-scale="1">
-            <h2>Key Topics Covered</h2>
+        <div class="step slide">
+            <h1>Key Topics Covered</h1>
             <div class="topics-grid">
                 <div class="topic-card">
                     <h3>🤖 AI Tools</h3>
@@ -86,13 +98,13 @@
         </div>
 
         <!-- The New Reality -->
-        <div class="step" data-x="0" data-y="1500" data-scale="1">
-            <h2>So, What the Heck is Going On?</h2>
-            <div class="reality-section">
+        <div class="step slide" data-rel-x="0" data-rel-y="1200">
+            <h1>So, What the Heck is Going On?</h1>
+            <div class="content-section">
                 <h3>🏢 Corporate Management's New Religion</h3>
                 <p><em>"The New Production Function" aka "The Software Factory"</em></p>
             </div>
-            <div class="reality-section">
+            <div class="content-section">
                 <h4>"It sounds like a cult when they talk about it - What does this mean?"</h4>
                 <ul>
                     <li>🚀 Adventurous AI practitioners demonstrating productivity gains</li>
@@ -107,8 +119,8 @@
         </div>
 
         <!-- Manager Mindset -->
-        <div class="step" data-x="1500" data-y="1500" data-scale="1">
-            <h2>Welcome to your new Job as a Manager</h2>
+        <div class="step slide">
+            <h1>Welcome to your new Job as a Manager</h1>
             <div class="manager-section">
                 <h3>You just hired 5 of this lady:</h3>
                 <div class="character-section">
@@ -130,13 +142,13 @@
         </div>
 
         <!-- Code Quality Reality -->
-        <div class="step" data-x="3000" data-y="1500" data-scale="1">
-            <h2>But doesn't the AI produce lots of garbage code?</h2>
-            <div class="quality-section">
+        <div class="step slide">
+            <h1>But doesn't the AI produce lots of garbage code?</h1>
+            <div class="content-section">
                 <h3>🗑️ The Honest Truth</h3>
                 <p><strong>Yes, it does. Frequently.</strong></p>
             </div>
-            <div class="quality-section">
+            <div class="content-section">
                 <h3>✨ But Also...</h3>
                 <ul>
                     <li>Increasingly produces <strong>useful</strong> code</li>
@@ -144,7 +156,7 @@
                     <li>Right guardrails + close attention = useful, functional, innovative results</li>
                 </ul>
             </div>
-            <div class="quality-section">
+            <div class="content-section">
                 <h3>🎯 The Real Benefits</h3>
                 <ul>
                     <li>🔍 Discover how to do things you didn't know</li>
@@ -155,8 +167,8 @@
         </div>
 
         <!-- Tools Overview -->
-        <div class="step" data-x="4500" data-y="1500" data-scale="1">
-            <h2>OMG the agents are everywhere</h2>
+        <div class="step slide">
+            <h1>OMG the agents are everywhere</h1>
             <div class="tools-grid">
                 <div class="tool-card">
                     <h3>☁️ Cloud-Based</h3>
@@ -183,9 +195,9 @@
         </div>
 
         <!-- Spec-Driven Development -->
-        <div class="step" data-x="0" data-y="3000" data-scale="1">
-            <h2>Spec-Driven Development</h2>
-            <div class="spec-section">
+        <div class="step slide" data-rel-x="0" data-rel-y="1200">
+            <h1>Spec-Driven Development</h1>
+            <div class="content-section">
                 <h3>📋 The Principle</h3>
                 <ul>
                     <li>Create the specification you would want to receive as a developer</li>
@@ -197,7 +209,7 @@
                 <h3>🎯 The Approach</h3>
                 <p><strong>Write a spec as if you were trying to set an intern up for success.</strong></p>
             </div>
-            <div class="spec-section">
+            <div class="content-section">
                 <h3>❓ But what if I don't have a spec?</h3>
                 <ul>
                     <li>✍️ Write a few sentences, then talk to o3 or GPT-4.1/4.5</li>
@@ -209,8 +221,8 @@
         </div>
 
         <!-- Iterative Workflow -->
-        <div class="step" data-x="1500" data-y="3000" data-scale="1">
-            <h2>Iterative Workflow</h2>
+        <div class="step slide">
+            <h1>Iterative Workflow</h1>
             <div class="workflow-grid">
                 <div class="workflow-step">
                     <div class="step-number">1</div>
@@ -251,8 +263,8 @@
         </div>
 
         <!-- Troubleshooting -->
-        <div class="step" data-x="3000" data-y="3000" data-scale="1">
-            <h2>Things to watch out for and first-aid</h2>
+        <div class="step slide">
+            <h1>Things to watch out for and first-aid</h1>
             <div class="troubleshooting-grid">
                 <div class="trouble-item">
                     <span class="problem">🐌 Throttling</span>
@@ -282,14 +294,14 @@
         </div>
 
         <!-- Best Practices -->
-        <div class="step" data-x="4500" data-y="3000" data-scale="1">
-            <h2>You have to always look at the code... but you won't</h2>
-            <div class="practices-section">
+        <div class="step slide">
+            <h1>You have to always look at the code... but you won't</h1>
+            <div class="content-section">
                 <h3>🚨 Hard Truth</h3>
                 <p>Seriously, you can't skip this.</p>
                 <p>Once you're grooving and it "just works," you <em>will</em> skip it.</p>
             </div>
-            <div class="practices-section">
+            <div class="content-section">
                 <h3>🛠️ Here's what to do:</h3>
                 <ul>
                     <li>💬 Ask the model to explain the code – you'll often be horrified (update instructions!)</li>
@@ -304,23 +316,23 @@
         </div>
 
         <!-- Future -->
-        <div class="step" data-x="2250" data-y="4500" data-scale="1">
-            <h2>This is just a waypoint – where are we going?</h2>
-            <div class="future-section">
+        <div class="step slide" data-rel-x="0" data-rel-y="1200">
+            <h1>This is just a waypoint – where are we going?</h1>
+            <div class="content-section">
                 <h3>📈 The capabilities keep increasing</h3>
             </div>
             <div class="highlight">
                 <h3>🎯 We are headed to self-improving programs</h3>
             </div>
-            <div class="future-section">
+            <div class="content-section">
                 <p>This tutorial represents current best practices, but the field is evolving rapidly. Stay curious, keep experimenting, and adapt your workflow as new tools and capabilities emerge.</p>
             </div>
         </div>
 
         <!-- Conclusion -->
-        <div class="step" data-x="2250" data-y="6000" data-scale="1">
-            <h2>Thank you for taking this journey!</h2>
-            <div class="conclusion-section">
+        <div class="step slide">
+            <h1>Thank you for taking this journey!</h1>
+            <div class="content-section">
                 <h3>🎯 Key Takeaways</h3>
                 <ul>
                     <li>AI is a powerful partner, not just autocomplete</li>
@@ -337,104 +349,13 @@
         </div>
 
         <!-- Overview -->
-        <div id="overview" class="step" data-x="2250" data-y="3000" data-scale="10">
+        <div id="overview" class="step" data-x="0" data-y="0" data-scale="6" style="pointer-events: none;">
         </div>
 
     </div>
 
-    <div class="navigation-help">
-        <p>Use arrow keys or spacebar to navigate • Press 'o' for overview</p>
-    </div>
+    <script src="https://unpkg.com/impress.js@2.0.0/impress.min.js"></script>
+    <script>impress().init();</script>
 
-    <script src="impress.min.js"></script>
-    <script>
-        // Debug logging
-        console.log('Starting impress.js initialization...');
-        
-        function initImpress() {
-            try {
-                console.log('Checking impress availability:', typeof window.impress);
-                
-                if (typeof window.impress !== 'function') {
-                    console.error('impress.js not loaded properly');
-                    return;
-                }
-                
-                // Initialize impress.js
-                const api = impress();
-                console.log('impress.js API created:', api);
-                
-                if (!api) {
-                    console.error('Failed to create impress API');
-                    return;
-                }
-                
-                // Check for required DOM elements
-                const impressRoot = document.getElementById('impress');
-                const steps = document.querySelectorAll('.step');
-                console.log('Found impress root:', !!impressRoot);
-                console.log('Found steps:', steps.length);
-                
-                if (!impressRoot) {
-                    console.error('No #impress element found');
-                    return;
-                }
-                
-                if (steps.length === 0) {
-                    console.error('No .step elements found');
-                    return;
-                }
-                
-                // Initialize
-                const result = api.init();
-                console.log('impress.js initialized successfully:', result);
-                
-                // Add navigation event listeners
-                document.addEventListener('keydown', function(event) {
-                    console.log('Key pressed:', event.key);
-                    switch(event.key) {
-                        case 'ArrowRight':
-                        case ' ':
-                            event.preventDefault();
-                            api.next();
-                            break;
-                        case 'ArrowLeft':
-                            event.preventDefault();
-                            api.prev();
-                            break;
-                        case 'o':
-                        case 'O':
-                            event.preventDefault();
-                            api.goto('overview');
-                            break;
-                    }
-                });
-                
-                // Test navigation
-                console.log('Navigation API available:', {
-                    next: typeof api.next,
-                    prev: typeof api.prev,
-                    goto: typeof api.goto
-                });
-                
-                return api;
-                
-            } catch (error) {
-                console.error('Error initializing impress.js:', error);
-            }
-        }
-        
-        // Try multiple initialization methods
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initImpress);
-        } else {
-            initImpress();
-        }
-        
-        // Fallback initialization
-        window.addEventListener('load', function() {
-            setTimeout(initImpress, 100);
-        });
-    </script>
 </body>
 </html>
