@@ -6,6 +6,8 @@
     <title>Vibe Coding Won't Save You - Interactive Tutorial</title>
     <link rel="stylesheet" href="https://unpkg.com/impress.js@next/extras/impress-demos.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body class="impress-not-supported">
     <div class="fallback-message">
@@ -496,36 +498,60 @@
     <script src="https://unpkg.com/impress.js@next/extras/impress-demos.js"></script>
     <script src="https://unpkg.com/impress.js@next/impress.js"></script>
     <script>
-        // Initialize impress.js
-        impress().init();
-        
-        // Add some custom navigation enhancements
-        document.addEventListener('keydown', function(e) {
-            // P key for overview
-            if (e.key === 'p' || e.key === 'P') {
-                impress().goto('overview-all');
+        // Force Safari compatibility
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove the not-supported class to enable impress.js
+            document.body.classList.remove('impress-not-supported');
+            
+            // Hide the fallback message
+            const fallback = document.querySelector('.fallback-message');
+            if (fallback) {
+                fallback.style.display = 'none';
             }
-        });
+            
+            // Initialize impress.js with error handling
+            try {
+                const api = impress();
+                api.init();
+                
+                // Add custom navigation enhancements
+                document.addEventListener('keydown', function(e) {
+                    // P key for overview
+                    if (e.key === 'p' || e.key === 'P') {
+                        api.goto('overview-all');
+                    }
+                });
 
-        // Auto-advance functionality (optional)
-        let autoAdvance = false;
-        let autoAdvanceTimeout;
-        
-        function toggleAutoAdvance() {
-            autoAdvance = !autoAdvance;
-            if (autoAdvance) {
-                autoAdvanceTimeout = setInterval(() => {
-                    impress().next();
-                }, 10000); // 10 seconds per slide
-            } else {
-                clearInterval(autoAdvanceTimeout);
-            }
-        }
-        
-        // Add auto-advance toggle on 'a' key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'a' || e.key === 'A') {
-                toggleAutoAdvance();
+                // Auto-advance functionality
+                let autoAdvance = false;
+                let autoAdvanceTimeout;
+                
+                function toggleAutoAdvance() {
+                    autoAdvance = !autoAdvance;
+                    if (autoAdvance) {
+                        autoAdvanceTimeout = setInterval(function() {
+                            api.next();
+                        }, 10000); // 10 seconds per slide
+                    } else {
+                        clearInterval(autoAdvanceTimeout);
+                    }
+                }
+                
+                // Add auto-advance toggle on 'a' key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'a' || e.key === 'A') {
+                        toggleAutoAdvance();
+                    }
+                });
+                
+                console.log('Impress.js initialized successfully');
+                
+            } catch (error) {
+                console.warn('Impress.js initialization failed:', error);
+                // Show fallback message if initialization fails
+                if (fallback) {
+                    fallback.style.display = 'block';
+                }
             }
         });
     </script>
