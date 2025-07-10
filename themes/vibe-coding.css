@@ -1,0 +1,39 @@
+/* @theme vibe-coding */
+
+section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  color: #00ff88;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+h2 {
+  color: #00ff88;
+}
+
+strong {
+  color: #00ff88;
+}
+
+em {
+  color: #ff6b6b;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00ff88;
+}
+
+blockquote {
+  border-left: 4px solid #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+}
