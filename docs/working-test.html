@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working Impress.js Test</title>
+    
+    <!-- ONLY use impress.js CSS, no custom overrides -->
+    <link href="https://unpkg.com/impress.js@2.0.0/css/impress-common.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress">
+        <div class="step" data-x="0" data-y="0">
+            <h1>Working Test Slide 1</h1>
+            <p>This should work with default impress.js styling</p>
+        </div>
+        
+        <div class="step" data-x="1200" data-y="0">
+            <h1>Working Test Slide 2</h1>
+            <p>Use arrow keys to navigate</p>
+        </div>
+        
+        <div class="step" data-x="2400" data-y="0">
+            <h1>Working Test Slide 3</h1>
+            <p>If you see all slides at once, it's broken</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/impress.js@2.0.0/impress.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 Testing basic impress.js...');
+            if (typeof impress !== 'undefined') {
+                try {
+                    impress().init();
+                    console.log('✅ Basic impress.js working!');
+                } catch (error) {
+                    console.error('❌ Basic impress.js failed:', error);
+                }
+            } else {
+                console.error('❌ impress.js not loaded');
+            }
+        });
+    </script>
+
+</body>
+</html>
