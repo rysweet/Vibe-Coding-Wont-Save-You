@@ -27,19 +27,25 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Install Marp CLI
-      run: npm install -g @marp-team/marp-cli
+    - name: Install Marp CLI and markdown-it-include
+      run: |
+        npm install -g @marp-team/marp-cli
+        npm install markdown-it-include --save-dev
 
     - name: Build modular presentation
       run: |
-        # Run the build script which includes index generation
         ./build-slides.sh
-        
-        # Copy images to correct location for all slides
         if [ -d "docs/images" ]; then
           mkdir -p dist/docs/images
           cp -r docs/images/* dist/docs/images/
         fi
+
+    - name: List dist directory contents
+      run: |
+        echo "Contents of dist/:"
+        ls -l dist/
+        echo "Contents of dist/docs/images/:"
+        ls -l dist/docs/images/ || true
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
