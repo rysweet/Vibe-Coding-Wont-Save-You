@@ -1,6 +1,6 @@
-import markdownItInclude from "markdown-it-include";
+const markdownItInclude = require("markdown-it-include");
 
-export default {
+module.exports = {
   engine: ({ marp }) => {
     marp.markdown.use(markdownItInclude, {
       root: "./slides"
