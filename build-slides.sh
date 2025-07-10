@@ -2,8 +2,9 @@
 
 # Build script for MARP presentation using modular slides
 # Concatenates all slides/*.md into presentation.md before building
+# Only keeps the frontmatter from the first slide
 
-echo "🎯 Building MARP presentation from modular slides (concatenation approach)..."
+echo "🎯 Building MARP presentation from modular slides (concatenation approach, single frontmatter)..."
 
 # Check if npx is available
 if ! command -v npx &> /dev/null; then
@@ -14,9 +15,26 @@ fi
 # Create output directory
 mkdir -p dist
 
-# Overwrite presentation.md with concatenated slides (no @include lines)
-echo "🔄 Concatenating slides/*.md into presentation.md"
-cat slides/*.md > presentation.md
+# Concatenate slides, keeping only the first frontmatter block
+echo "🔄 Concatenating slides/*.md into presentation.md (single frontmatter)"
+first=1
+> presentation.md
+for file in slides/*.md; do
+  if [[ $first -eq 1 ]]; then
+    # Copy the first file as-is (including frontmatter)
+    cat "$file" >> presentation.md
+    first=0
+  else
+    # Strip frontmatter (YAML block at the top) from subsequent files
+    awk 'BEGIN{inblock=0; started=0}
+      /^---[[:space:]]*$/ {
+        if (inblock == 0 && started == 0) { inblock=1; next }
+        else if (inblock == 1) { inblock=0; started=1; next }
+      }
+      { if (inblock == 0) print }
+    ' "$file" >> presentation.md
+  fi
+done
 
 echo "📁 Processing entry: presentation.md"
 echo "🎨 Using theme: ./themes/vibe-coding.css"
